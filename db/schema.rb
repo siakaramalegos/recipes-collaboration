@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20150616143209) do
+ActiveRecord::Schema.define(version: 20150616152526) do
 
   create_table "recipes", force: :cascade do |t|
     t.string   "title"
@@ -19,7 +19,10 @@ ActiveRecord::Schema.define(version: 20150616143209) do
     t.text     "steps"
     t.datetime "created_at",  null: false
     t.datetime "updated_at",  null: false
+    t.integer  "users_id"
   end
+
+  add_index "recipes", ["users_id"], name: "index_recipes_on_users_id"
 
   create_table "users", force: :cascade do |t|
     t.string   "email",                  default: "", null: false
@@ -34,9 +37,11 @@ ActiveRecord::Schema.define(version: 20150616143209) do
     t.string   "last_sign_in_ip"
     t.datetime "created_at",                          null: false
     t.datetime "updated_at",                          null: false
+    t.integer  "recipes_id"
   end
 
   add_index "users", ["email"], name: "index_users_on_email", unique: true
+  add_index "users", ["recipes_id"], name: "index_users_on_recipes_id"
   add_index "users", ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true
 
 end
