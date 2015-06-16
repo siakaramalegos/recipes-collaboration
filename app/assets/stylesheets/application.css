@@ -13,3 +13,7 @@
  *= require_tree .
  *= require_self
  */
+
+.user-email {
+  padding: 19.5px 15px 19.5px 15px;
+}
