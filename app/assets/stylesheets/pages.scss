@@ -10,12 +10,20 @@
   margin-top: -30px;
   height: 500px;
   color: white;
-}
 
-.jumbotron h1 {
-  color: white;
-}
 
-.jumbotron p {
-  color: white;
+  .boxy {
+    background-color: rgba(255,255,255,0.6);
+    padding: 40px;
+    margin-top: 40px;
+
+    h1 {
+      color: #DE7700;
+      text-shadow: 1px 1px #444;
+    }
+
+    p {
+      color: #444;
+    }
+  }
 }

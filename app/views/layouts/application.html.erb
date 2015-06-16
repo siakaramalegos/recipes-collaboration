@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
   <meta charset="utf-8">
-  <title>Recipes</title>
+  <title>Cook Me Something, Mister!</title>
 
   <link rel="stylesheet" href="//netdna.bootstrapcdn.com/bootswatch/3.0.2/journal/bootstrap.min.css">
   <link rel="stylesheet" href="//netdna.bootstrapcdn.com/font-awesome/4.0.2/css/font-awesome.min.css">
@@ -32,13 +32,13 @@
         <span class="icon-bar"></span>
         <span class="icon-bar"></span>
       </button>
-      <%= link_to Rails.application.class.parent_name, root_url, :class => "navbar-brand" %>
+      <%= link_to "Cook Me!", root_url, :class => "navbar-brand" %>
     </div>
 
     <!-- Collect the nav links, forms, and other content for toggling -->
     <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
       <ul class="nav navbar-nav">
-        <li><%= link_to "Recipes", recipes_url %></li>
+        <li><%= link_to "All Recipes", recipes_url %></li>
         <li><%= link_to "About", pages_about_path %></li>
       </ul>
 
