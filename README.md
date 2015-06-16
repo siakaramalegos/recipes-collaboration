@@ -1,19 +1,7 @@
 # Recipe Collaboration
 
 This is a collaboration project for Tech Talent South Nola's Spring session.
-Contributors include
 
-Instructor Sia Karamalegos (initially created)
-Students: (contributors)
-Robert Turner
-Sabrina Marlbrough
-Leigh Turland
-Kevin Truong
+See more about the contributors on the About page.  If you contribute to this project, add your name on the About page.
 
-Please add your name to the Readme file for credit.
-
-
-
-Used Faker and Populator gems
-use rake db:migrate
-to update database with Faker data.
+This app includes Faker and Populator to create a special `rake db:populate` command to populate your development database with fake recipes data.
