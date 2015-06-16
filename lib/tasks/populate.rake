@@ -3,10 +3,13 @@ namespace :db do
   task :populate => :environment do
   require 'populator'
   require 'faker'
+
+  [Recipe].each(&:delete_all)
+
     Recipe.populate 10 do |recipe|
-    recipe.title = Faker::Lorem.words
-    recipe.ingredients = Faker::Lorem.sentence(3)
-    recipe.steps = Faker::Lorem.paragraph(1)
+    recipe.title = Faker::Lorem.sentence
+    recipe.ingredients = Faker::Lorem.paragraph
+    recipe.steps = Faker::Lorem.paragraph
     end
     puts 'All done'
   end
