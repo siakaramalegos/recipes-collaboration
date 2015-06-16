@@ -11,19 +11,19 @@
     </div>
   <% end %>
 
-  <div class="field">
+  <div class="field form-group">
     <%= f.label :title %><br>
-    <%= f.text_field :title %>
+    <%= f.text_field :title, class: "form-control", placeholder: "My favorite receipe's name" %>
   </div>
-  <div class="field">
+  <div class="field form-group">
     <%= f.label :ingredients %><br>
-    <%= f.text_area :ingredients %>
+    <%= f.text_area :ingredients, class: "form-control", placeholder: "List your ingredients" %>
   </div>
-  <div class="field">
+  <div class="field form-group">
     <%= f.label :steps %><br>
-    <%= f.text_area :steps %>
+    <%= f.text_area :steps, class: "form-control", placeholder: "List your steps" %>
   </div>
   <div class="actions">
-    <%= f.submit %>
+    <%= f.submit class: "btn btn-success" %>
   </div>
 <% end %>

@@ -1,31 +1,31 @@
-<p id="notice"><%= notice %></p>
+<style>
+  td {vertical-align: top; }
+</style>
+<h2>Available Recipes</h2>
 
-<h1>Listing Recipes</h1>
-
-<table>
-  <thead>
-    <tr>
-      <th>Title</th>
-      <th>Ingredients</th>
-      <th>Steps</th>
-      <th colspan="3"></th>
-    </tr>
-  </thead>
-
-  <tbody>
-    <% @recipes.each do |recipe| %>
-      <tr>
-        <td><%= recipe.title %></td>
-        <td><%= recipe.ingredients %></td>
-        <td><%= recipe.steps %></td>
-        <td><%= link_to 'Show', recipe %></td>
-        <td><%= link_to 'Edit', edit_recipe_path(recipe) %></td>
-        <td><%= link_to 'Destroy', recipe, method: :delete, data: { confirm: 'Are you sure?' } %></td>
-      </tr>
-    <% end %>
-  </tbody>
-</table>
+    <div class="row">
+      <% @recipes.each do |recipe| %>
+        <div class="col-sm-6">
+        <div class="panel panel-default">
+          <div class="panel-heading">
+            <h3 class="panel-title"><%= recipe.title %></h3>
+          </div> <!-- panel-heading -->
+          <div class="panel-body">
+            <h5>Ingredients:</h5>
+            <%= recipe.ingredients %><br><br>
+            <h6>Steps:</h6>
+            <%= recipe.steps %>
+          </div> <!-- panel-body -->
+          <div class="panel-footer">
+            <%= link_to content_tag(:i, nil, class: "fa fa-eye"), recipe %>
+            <%= link_to content_tag(:i, nil, class: "fa fa-pencil"), edit_recipe_path(recipe) %>
+            <%= link_to content_tag(:i, nil, class: "fa fa-trash-o"), recipe, method: :delete, data: { confirm: 'Are you sure?' } %>
+          </div> <!-- panel-footer -->
+        </div>
+        </div>
+      <% end %>
+    </div>
 
 <br>
 
-<%= link_to 'New Recipe', new_recipe_path %>
+<%= link_to 'New Recipe', new_recipe_path, class: "btn btn-default" %>
