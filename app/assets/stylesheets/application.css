@@ -14,6 +14,10 @@
  *= require_self
  */
 
+body {
+  margin-top: 50px;
+}
+
 .user-email {
   padding: 19.5px 15px 19.5px 15px;
 }
