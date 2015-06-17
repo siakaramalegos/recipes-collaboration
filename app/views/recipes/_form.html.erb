@@ -23,6 +23,10 @@
     <%= f.label :steps %><br>
     <%= f.text_area :steps, class: "form-control", placeholder: "List your steps" %>
   </div>
+  <div class="field form-group">
+    <%= f.label "Author" %><br>
+    <%= f.collection_select :user_id, User.all, :id, :name, {prompt: "Select an author"}, {class: "form-control"} %>
+  </div>
   <div class="actions">
     <%= f.submit class: "btn btn-success" %>
   </div>
