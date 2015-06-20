@@ -1,5 +1,17 @@
 <h2>Available Recipes</h2>
 
+<!--search box -->
+<div class="pull-right">       
+      <%= form_tag("/recipes", method: "get", role: "search", class: "navbar-form navbar-left") do %>
+        <div class ="form-group">
+          <%= text_field_tag(:search, nil, placeholder: "Search for a Recipe", class: "form-control input-sm") %>
+        </div>
+      <%= submit_tag("Go", class: "btn btn-default btn-xs") %>
+      <% end %> <!--ends search bar-->
+      <%= link_to 'Show All', recipes_path, class: "btn btn-default btn-xs" %>
+  </div> <!--pull-right-->
+  <!--end search box-->
+
     <div class="row">
       <% @recipes.each do |recipe| %>
         <div class="col-sm-6">
