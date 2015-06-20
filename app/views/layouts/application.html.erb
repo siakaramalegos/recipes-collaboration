@@ -42,6 +42,16 @@
         <li><%= link_to "About", pages_about_path %></li>
       </ul>
 
+      <!--search box -->
+      <form class="navbar-form navbar-left" role="search">
+      <%= form_tag("/recipes", method: "get", role: "search", class: "navbar-form navbar-left") do %>
+        <div class ="form-group">
+          <%= text_field_tag(:search, nil, placeholder: "Search for a Recipe", class: "form-control") %>
+        </div>
+        <%= submit_tag("Go", class: "btn btn-default") %>
+        <% end %> <!--ends search bar-->
+      </form><!--end search box-->
+
       <ul class="nav navbar-nav navbar-right">
         <% if user_signed_in? %>
           <li class="user-email"><%= current_user.email %></li>
