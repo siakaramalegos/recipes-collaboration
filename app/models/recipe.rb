@@ -5,5 +5,3 @@ class Recipe < ActiveRecord::Base
   friendly_id :title, use: :slugged
 
 end
-
-Recipe.create! title: "Joe Schmoe"
