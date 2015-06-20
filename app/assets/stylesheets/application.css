@@ -16,6 +16,17 @@
 
 body {
   margin-top: 50px;
+  background-color: #f3f3f3;
+}
+
+.container {
+  background-color: white;
+  border-radius: 20px;
+  padding: 20px;
+}
+
+.row {
+  margin-bottom: 20px;
 }
 
 .user-email {
@@ -29,4 +40,10 @@ body {
 
 .td {
   vertical-align: top;
+}
+
+.ingredients {
+  background-color: #f9ece2;
+  border-right: 2px dotted orange;
+  min-height: 300px;
 }

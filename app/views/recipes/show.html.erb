@@ -1,17 +1,19 @@
-<p>
-  <strong>Title:</strong>
-  <%= @recipe.title %>
-</p>
+<div class="row">
+  <div class="col-sm-12">
+    <h1><%= @recipe.title %></h1>
+  </div><!--col-sm-12-->
+</div><!--row-->
 
-<p>
-  <strong>Ingredients:</strong>
-  <%= @recipe.ingredients %>
-</p>
-
-<p>
-  <strong>Steps:</strong>
-  <%= @recipe.steps %>
-</p>
+<div class="row">
+  <div class="col-sm-3 ingredients">
+    <h3>Ingredients</h3>
+    <p><%= @recipe.ingredients %></p>
+  </div><!--col-sm-3-->
+  <div class="col-sm-9 steps">
+    <h3>Steps:</h3>
+    <p><%= @recipe.steps %></p>
+  </div><!--col-sm-9-->
+</div><!--row-->
 
 <%= link_to 'Edit', edit_recipe_path(@recipe) %> |
 <%= link_to 'Back', recipes_path %>
