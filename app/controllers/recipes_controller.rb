@@ -5,8 +5,20 @@ class RecipesController < ApplicationController
   # GET /recipes
   # GET /recipes.json
   def index
-    @recipes = Recipe.all
-  end
+   if params[:search]
+     @recipes = Recipe.where("title LIKE '%#{params[:search]}%'")
+     if @recipes.size.zero?
+       flash[:notice] = "That sounds amazing! But... we don't have that recipe."
+       @recipes = Recipe.all
+     end
+   else
+     @recipes = Recipe.all
+   end
+ end
+
+
+
+
 
   # GET /recipes/1
   # GET /recipes/1.json
