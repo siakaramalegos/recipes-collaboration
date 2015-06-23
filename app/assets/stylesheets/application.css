@@ -38,6 +38,9 @@ body {
   width: 100%;
 }
 
+.modal-body img {
+  margin-bottom: 20px;
+}
 .user-email {
   padding: 19.5px 15px 19.5px 15px;
 }
@@ -52,7 +55,13 @@ body {
 }
 
 .ingredients {
-  background-color: #f9ece2;
-  border-right: 2px dotted orange;
+  background-color: #f3f3f3;
+  padding: 0px 10px 10px 10px;
+  border-right: 2px solid #f3f3f3;
   min-height: 300px;
+  margin-left: 10px;
+}
+
+.steps {
+  margin-right: -10px;
 }
