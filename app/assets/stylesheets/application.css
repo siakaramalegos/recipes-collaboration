@@ -29,6 +29,15 @@ body {
   margin-bottom: 20px;
 }
 
+.panel-body {
+  max-height: 300px;
+  overflow: hidden;
+}
+
+.panel-body img {
+  width: 100%;
+}
+
 .user-email {
   padding: 19.5px 15px 19.5px 15px;
 }

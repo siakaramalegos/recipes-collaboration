@@ -2,12 +2,13 @@
 
     <div class="row">
       <% @recipes.each do |recipe| %>
-        <div class="col-sm-6">
+        <div class="col-sm-4">
         <div class="panel panel-default">
           <div class="panel-heading">
             <h3 class="panel-title"><%= recipe.title %></h3>
           </div> <!-- panel-heading -->
           <div class="panel-body">
+            <img src="http://placehold.it/300x200">
             <h5>Ingredients:</h5>
             <%= recipe.ingredients %><br><br>
             <h6>Steps:</h6>
@@ -18,8 +19,8 @@
             <%= link_to content_tag(:i, nil, class: "fa fa-pencil"), edit_recipe_path(recipe) %>
             <%= link_to content_tag(:i, nil, class: "fa fa-trash-o"), recipe, method: :delete, data: { confirm: 'Are you sure?' } %>
           </div> <!-- panel-footer -->
-        </div>
-        </div>
+        </div><!--panel panel-default-->
+        </div><!--col-sm-4-->
       <% end %>
     </div>
 
