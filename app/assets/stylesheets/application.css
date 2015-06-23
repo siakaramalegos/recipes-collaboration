@@ -14,6 +14,9 @@
  *= require_self
  */
 
+
+/*  ---- SITE-WIDE STYLES ---- */
+
 body {
   margin-top: 50px;
   background-color: #f3f3f3;
@@ -29,18 +32,6 @@ body {
   margin-bottom: 20px;
 }
 
-.panel-body {
-  max-height: 300px;
-  overflow: hidden;
-}
-
-.panel-body img {
-  width: 100%;
-}
-
-.modal-body img {
-  margin-bottom: 20px;
-}
 .user-email {
   padding: 19.5px 15px 19.5px 15px;
 }
@@ -52,6 +43,24 @@ body {
 
 .td {
   vertical-align: top;
+}
+
+/*  ---- RECIPE INDEX STYLES ---- */
+
+.panel-body {
+  max-height: 300px;
+  overflow: hidden;
+}
+
+.panel-body img {
+  width: 100%;
+}
+
+
+/*  ---- MODAL STYLES ---- */
+
+.modal-body img {
+  margin-bottom: 20px;
 }
 
 .ingredients {
