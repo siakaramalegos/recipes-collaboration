@@ -8,7 +8,8 @@
           <h3 class="panel-title"><a href="#" data-toggle="modal" data-target="#myModal_<%= recipe.id%>"><%= recipe.title %></a></h3>
           </div> <!-- panel-heading -->
           <div class="panel-body">
-            <img src="http://placehold.it/300x200">
+          <a href="#" data-toggle="modal" data-target="#myModal_<%= recipe.id%>">
+            <img src="http://placehold.it/300x200"></a>
             <h5>Ingredients:</h5>
             <%= recipe.ingredients %><br><br>
             <h6>Steps:</h6>
@@ -31,24 +32,22 @@
                 <h2 class="modal-title" id="myModalLabel"><%= recipe.title %></h2>
               </div> <!-- modal header -->
               <div class="modal-body">
-              <img class="img-responsive" src="http://placehold.it/580x300">
-              <div class="row">
-                <div class="col-xs-4 ingredients">
-                  <h4>Ingredients</h4>
-                  <p><%= recipe.ingredients %></p>
-                </div><!--col-xs-4-->
-                <div class="col-xs-8 steps">
-                  <h4>Steps</h4>
-                  <p><%= recipe.steps %></p>
-                </div><!--col-xs-8-->
-              </div><!--row-->
-            
+                <img class="img-responsive" src="http://placehold.it/580x300">
+                <div class="row">
+                  <div class="col-xs-4 ingredients">
+                    <h4>Ingredients</h4>
+                    <p><%= recipe.ingredients %></p>
+                  </div><!--col-xs-4-->
+                  <div class="col-xs-8 steps">
+                    <h4>Steps</h4>
+                    <p><%= recipe.steps %></p>
+                  </div><!--col-xs-8-->
+                </div><!--row-->
               </div> <!-- modal body -->
 
               <div class="modal-footer">
-                <%= link_to content_tag(:i, nil, class: "fa fa-eye"), recipe %>
                 <%= link_to content_tag(:i, nil, class: "fa fa-pencil"), edit_recipe_path(recipe) %>
-                <%= link_to content_tag(:i, nil, class: "fa fa-trash-o"), recipe, method: :delete, data: { confirm: 'Are you sure?' } %>
+                <%= link_to content_tag(:i, nil, class: "fa fa-trash-o"), recipe, method: :delete, data: { confirm: 'Are you sure you want to delete this recipe?' } %>
               </div><!-- modal footer -->
             </div> <!-- modal content -->
           </div> <!-- modal dialogue -->
