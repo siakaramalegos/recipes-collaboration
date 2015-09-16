@@ -6,13 +6,13 @@ class RecipesController < ApplicationController
   # GET /recipes.json
   def index
    if params[:search]
-     @recipes = Recipe.where("title LIKE '%#{params[:search]}%'")
+     @recipes = Recipe.where("title LIKE '%#{params[:search]}%'").paginate(:page => params[:page], :per_page => 8)
      if @recipes.size.zero?
        flash[:notice] = "That sounds amazing! But... we don't have that recipe."
-       @recipes = Recipe.all.paginate(:page => params[:page], :per_page => 10)
+       @recipes = Recipe.all.paginate(:page => params[:page], :per_page => 8)
      end
    else
-     @recipes = Recipe.all.paginate(:page => params[:page], :per_page => 10)
+     @recipes = Recipe.all.paginate(:page => params[:page], :per_page => 8)
    end
  end
 
@@ -82,6 +82,6 @@ class RecipesController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def recipe_params
-      params.require(:recipe).permit(:title, :ingredients, :steps, :user_id)
+      params.require(:recipe).permit(:title, :ingredients, :steps, :user_id, :page)
     end
 end
