@@ -9,10 +9,10 @@ class RecipesController < ApplicationController
      @recipes = Recipe.where("title LIKE '%#{params[:search]}%'")
      if @recipes.size.zero?
        flash[:notice] = "That sounds amazing! But... we don't have that recipe."
-       @recipes = Recipe.all
+       @recipes = Recipe.all.paginate(:page => params[:page], :per_page => 10)
      end
    else
-     @recipes = Recipe.all
+     @recipes = Recipe.all.paginate(:page => params[:page], :per_page => 10)
    end
  end
 

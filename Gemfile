@@ -42,6 +42,9 @@ gem 'starter_generators'
 gem 'awesome_print'
 gem 'quiet_assets', group: :development
 
+# Add pagination
+gem 'will_paginate', '~> 3.0.6'
+
 group :development, :test do
   # Use sqlite3 as the database for Active Record
   gem 'sqlite3'
