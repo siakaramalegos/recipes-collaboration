@@ -42,6 +42,10 @@ gem 'starter_generators'
 gem 'awesome_print'
 gem 'quiet_assets', group: :development
 
+# Use Paperclip for uploading of recipe images
+group :development do
+  gem 'paperclip', "~> 4.3"
+
 group :development, :test do
   # Use sqlite3 as the database for Active Record
   gem 'sqlite3'
