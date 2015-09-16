@@ -41,6 +41,7 @@ gem 'starter_generators'
 
 gem 'awesome_print'
 gem 'quiet_assets', group: :development
+gem 'font-awesome-rails'
 
 # Add pagination
 gem 'will_paginate', '~> 3.0.6'
