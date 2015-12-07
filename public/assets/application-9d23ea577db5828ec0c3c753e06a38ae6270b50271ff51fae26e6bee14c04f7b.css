@@ -1,3 +1,28 @@
+/* line 5, /Users/sia1/tts/recipes-collaboration/app/assets/stylesheets/pages.scss */
+.jumbotron {
+  background-image: url(/assets/food1-e6a278abc718ed157bf3f9ae95e7b3aff33b9cf68525b3ac6c795f28fab18bc6.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  margin-top: -30px;
+  height: 500px;
+  color: white;
+}
+/* line 15, /Users/sia1/tts/recipes-collaboration/app/assets/stylesheets/pages.scss */
+.jumbotron .boxy {
+  background-color: rgba(255, 255, 255, 0.6);
+  padding: 40px;
+  margin-top: 40px;
+}
+/* line 20, /Users/sia1/tts/recipes-collaboration/app/assets/stylesheets/pages.scss */
+.jumbotron .boxy h1 {
+  color: #DE7700;
+  text-shadow: 1px 1px #444;
+}
+/* line 25, /Users/sia1/tts/recipes-collaboration/app/assets/stylesheets/pages.scss */
+.jumbotron .boxy p {
+  color: #444;
+}
 /*
  * This is a manifest file that'll be compiled into application.css, which will include all the files
  * listed below.
@@ -10,15 +35,16 @@
  * defined in the other CSS/SCSS files in this directory. It is generally better to create a new
  * file per style scope.
  *
- *= require_tree .
- *= require_self
+
+
  */
 
 
 /*  ---- SITE-WIDE STYLES ---- */
 
+
 body {
-  padding-top: 60px;
+  margin-top: 50px;
   background-color: #f3f3f3;
 }
 
@@ -26,6 +52,11 @@ body {
   background-color: white;
   border-radius: 20px;
   /*padding: 20px;*/
+}
+
+.row {
+  margin-top: 20px;
+  margin-bottom: 20px;
 }
 
 .user-email {

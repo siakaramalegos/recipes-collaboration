@@ -3,14 +3,9 @@
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
 .jumbotron {
-  background-image: image-url("food1.jpg");
-  background-repeat: no-repeat;
+  background: image-url("food1.jpg") no-repeat fixed;
   background-size: cover;
-  background-position: center;
-  margin-top: -30px;
-  height: 500px;
   color: white;
-
 
   .boxy {
     background-color: rgba(255,255,255,0.6);
