@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20150620212413) do
+ActiveRecord::Schema.define(version: 20160315154614) do
 
   create_table "friendly_id_slugs", force: :cascade do |t|
     t.string   "slug",                      null: false
@@ -30,10 +30,14 @@ ActiveRecord::Schema.define(version: 20150620212413) do
     t.string   "title"
     t.text     "ingredients"
     t.text     "steps"
-    t.datetime "created_at",  null: false
-    t.datetime "updated_at",  null: false
+    t.datetime "created_at",         null: false
+    t.datetime "updated_at",         null: false
     t.integer  "user_id"
     t.string   "slug"
+    t.string   "photo_file_name"
+    t.string   "photo_content_type"
+    t.integer  "photo_file_size"
+    t.datetime "photo_updated_at"
   end
 
   add_index "recipes", ["slug"], name: "index_recipes_on_slug", unique: true

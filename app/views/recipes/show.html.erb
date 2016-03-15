@@ -12,6 +12,7 @@
   <div class="col-sm-9 steps">
     <h3>Steps:</h3>
     <p><%= @recipe.steps %></p>
+    <p><%= image_tag @recipe.photo.url(:medium) %></p>
   </div><!--col-sm-9-->
 </div><!--row-->
 

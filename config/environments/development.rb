@@ -6,6 +6,9 @@ Rails.application.configure do
   # since you don't have to restart the web server when you make code changes.
   config.cache_classes = false
 
+  # Telling Paperclip gem where to find ImageMagick
+  Paperclip.options[:command_path] = "/usr/local/bin/convert"
+
   # Do not eager load code on boot.
   config.eager_load = false
 
