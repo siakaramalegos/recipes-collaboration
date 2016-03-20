@@ -28,12 +28,14 @@
     <%= f.collection_select :user_id, User.all, :id, :name, {prompt: "Select an author"}, {class: "form-control"} %>
   </div>
 
+  <div class="form-group">
     <%= f.label "Photo" %><br>
     <%= f.file_field :photo %>
     <% if @recipe.photo.exists? %>
       <%= label_tag "Current Image" %>
       <p><%= image_tag @recipe.photo.url(:thumb) %></p>
     <% end %>
+  </div>
 
   <div class="actions">
     <%= f.submit class: "btn btn-success" %>
