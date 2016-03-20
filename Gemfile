@@ -42,6 +42,7 @@ gem 'starter_generators'
 gem 'awesome_print'
 gem 'quiet_assets', group: :development
 gem 'font-awesome-rails'
+gem "paperclip", "~> 4.3"
 
 # Add pagination
 gem 'will_paginate', '~> 3.0.6'

@@ -21,7 +21,7 @@
       </div> <!-- panel-heading -->
       <div class="panel-body">
       <a href="#" data-toggle="modal" data-target="#myModal_<%= recipe.id%>">
-        <img src="http://placehold.it/300x200"></a>
+        <%= image_tag recipe.photo.url(:medium) %></a>
         <h5>Ingredients:</h5>
         <%= recipe.ingredients %><br><br>
         <h6>Steps:</h6>
@@ -44,7 +44,7 @@
             <h2 class="modal-title" id="myModalLabel"><%= recipe.title %></h2>
           </div> <!-- modal header -->
           <div class="modal-body">
-            <img class="img-responsive" src="http://placehold.it/580x300">
+             <%= image_tag recipe.photo.url(:large), class:"img-responsive" %>
             <div class="row">
               <div class="col-xs-4 ingredients">
                 <h4>Ingredients</h4>
