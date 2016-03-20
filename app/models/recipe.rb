@@ -1,5 +1,5 @@
 class Recipe < ActiveRecord::Base
-	belongs_to :users
+	belongs_to :user
 
   has_attached_file :photo,
     :styles => { large: "580x300#", medium: "300x200#", thumb: "100x100#" },

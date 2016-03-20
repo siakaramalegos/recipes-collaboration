@@ -51,6 +51,8 @@
                 <p><%= recipe.ingredients %></p>
               </div><!--col-xs-4-->
               <div class="col-xs-8 steps">
+                <h4>Submitted By</h4>
+                <p><%= recipe.user.try(:name) %></p>
                 <h4>Steps</h4>
                 <p><%= recipe.steps %></p>
               </div><!--col-xs-8-->
