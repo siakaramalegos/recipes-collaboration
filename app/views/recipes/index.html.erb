@@ -21,7 +21,7 @@
       </div> <!-- panel-heading -->
       <div class="panel-body">
       <a href="#" data-toggle="modal" data-target="#myModal_<%= recipe.id%>">
-        <%= image_tag recipe.photo.url(:medium) %></a>
+        <%= image_tag recipe.photo.url(:medium) if recipe.photo.present? %></a>
         <h5>Ingredients:</h5>
         <%= recipe.ingredients %><br><br>
         <h6>Steps:</h6>
